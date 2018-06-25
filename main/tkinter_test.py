@@ -1,12 +1,13 @@
 from tkinter import *
 import ctypes
 import os
+from shutil import copyfile
 
 
 def bg_red():
     print("red")
-    SPI_SETDESKWALLPAPER = 20
-    ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, "D:\\hallo.jpg", 0)
+    image = "D:\TBZ Auftraege PC\Modul 122\M122\main\Snapchat-1907167772.jpg"
+    appdata
 
 
 def bg_blue():
