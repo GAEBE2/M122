@@ -16,6 +16,17 @@ class Application(Frame):
         self.QUIT["command"] = self.quit
         self.QUIT.pack({"side": "bottom"})
 
+        self.LIGHT["text"] = "Light"
+        self.LIGHT["bg"] = "#ffffff"
+        self.LIGHT["command"] = self.light
+        self.LIGHT.pack(side="bottom", fill=X)
+
+        self.DARK["text"] = "Dark"
+        self.DARK["bg"] = "#000000"
+        self.DARK["fg"] = "#ffffff"
+        self.DARK["command"] = self.dark
+        self.DARK.pack(side="bottom", fill=X, expand=YES)
+
         self.PATH_TEXT.insert(INSERT, self.path)
         self.PATH_TEXT.pack()
 
@@ -46,6 +57,14 @@ class Application(Frame):
         self.PATH_TEXT.insert(INSERT, self.path)
 
 
+    def dark(self):
+        print("dark")
+
+
+    def light(self):
+        print("light")
+
+
     def __init__(self, master):
         print("__init__tkinter_test")
 
@@ -54,6 +73,8 @@ class Application(Frame):
         self.PATH_TEXT = Text(fm, height=1)
         self.PATH_CHOOSER = Button(fm)
         self.CHANGE = Button(fm)
+        self.LIGHT = Button(fm)
+        self.DARK = Button(fm)
         self.QUIT = Button(fm)
         self.create_widgets()
 
